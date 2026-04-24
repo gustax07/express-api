@@ -1,0 +1,9 @@
+2026-04-24 16:55:44:5544 [31merror[39m: [31mErro ao criar usuário: PrismaClientKnownRequestError: [39m
+[31mInvalid `prisma.user.create()` invocation in[39m
+[31mC:\Users\gustavo.fsvieira\Documents\express-api\src\services\user.service.ts:6:36[39m
+
+[31m  3 [39m
+[31m  4 export const createUser = async (name: string, email: string, password: string) => {[39m
+[31m  5     const hashedPassword = await bcrypt.hash(password, 10);[39m
+[31m→ 6     const user = await prisma.user.create([39m
+[31mUnique constraint failed on the fields: (`email`)[39m
